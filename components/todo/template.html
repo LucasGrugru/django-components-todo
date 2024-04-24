@@ -1,4 +1,9 @@
-<div class="component-todo">
+<div class="component-todo py-3">
     <h5>{{ todo.title }}</h5>
-    <p>{{ todo.description }}</p>
+    <i>{{ todo.description }}</i>
+    <ul class="list-group">
+        {% for item in todo.items.all %}
+        {% component "todo_item" item=item %}{% endcomponent %}
+        {% endfor %}
+    </ul>
 </div>
