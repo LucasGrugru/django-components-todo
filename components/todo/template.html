@@ -1,5 +1,4 @@
 <div class="component-todo">
-    <h3>{% slot "title" %}Todo title{% endslot %}</h3>
-    <br>
-    <p>{% slot "content" %}Todo content{% endslot %}</p>
+    <h5>{{ todo.title }}</h5>
+    <p>{{ todo.description }}</p>
 </div>

@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {% component "todo" title="TITLE" content="Content" %}{% endcomponent %}
+    {% for todo in todos %}
+    {% component "todo" todo=todo %}{% endcomponent %}
+    {% endfor %}
 {% endblock %}
