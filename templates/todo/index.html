@@ -2,6 +2,6 @@
 
 {% block content %}
     {% for todo in todos %}
-    {% component "todo" todo=todo %}{% endcomponent %}
+    {% component "todo" todo=todo display_items=True %}{% endcomponent %}
     {% endfor %}
 {% endblock %}

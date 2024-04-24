@@ -18,7 +18,7 @@ class Todo(models.Model):
 
 
 class TodoItem(models.Model):
-    todo = models.ForeignKey(Todo, on_delete=models.CASCADE)
+    todo = models.ForeignKey(Todo, on_delete=models.CASCADE, related_name='items')
     title = models.CharField(max_length=255)
 
     done = models.BooleanField(default=False)
