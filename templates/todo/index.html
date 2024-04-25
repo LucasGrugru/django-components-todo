@@ -1,7 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {% for todo in todos %}
-    {% component "todo" todo=todo display_items=True %}{% endcomponent %}
-    {% endfor %}
+    <div class="row">
+        {% for todo in todos %}
+        {% component "todo" todo=todo display_items=True %}{% endcomponent %}
+        {% endfor %}
+    </div>
+
+    <div class="text-primary"><hr></div>
+    <div class="row">
+        {% component "form" form=todo_form %}{% endcomponent %}
+    </div>
 {% endblock %}

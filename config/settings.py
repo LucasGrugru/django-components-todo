@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django_components',
     'django_components.safer_staticfiles',
 
+    'crispy_forms',
+    'crispy_bootstrap4',
+
     'apps.todo',
 ]
 
@@ -140,3 +143,7 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_TEMPLATE_PACK = "bootstrap4"

@@ -20,5 +20,6 @@ from apps.todo import views as todo_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', todo_views.IndexView.as_view(), name='index')
+    path('', todo_views.IndexView.as_view(), name='index'),
+    path('create', todo_views.TodoCreateView.as_view(), name='todo-create-view')
 ]
