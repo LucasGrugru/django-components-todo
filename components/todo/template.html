@@ -4,6 +4,9 @@
         <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#todo-{{ todo.pk }}-item-add">
           Add item
         </button>
+        {% component "modal_form" form=todo_item_form %}
+            {% fill "modal_id" %}todo-{{ todo.pk }}-item-add{% endfill %}
+        {% endcomponent %}
     </h5>
     <i>{{ todo.description }}</i>
     <ul class="list-group">
@@ -11,8 +14,4 @@
         {% component "todo_item" item=item %}{% endcomponent %}
         {% endfor %}
     </ul>
-
-    {% component "modal" %}
-        {% fill "modal_id" %}todo-{{ todo.pk }}-item-add{% endfill %}
-    {% endcomponent %}
 </div>

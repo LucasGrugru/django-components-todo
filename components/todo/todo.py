@@ -1,5 +1,7 @@
 from django_components import component
 
+from apps.todo.forms import TodoItemForm
+
 
 @component.register("todo")
 class Todo(component.Component):
@@ -7,6 +9,7 @@ class Todo(component.Component):
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
+        context['todo_item_form'] = TodoItemForm(initial={'todo': kwargs.get("todo")})
         return context
 
     class Media:

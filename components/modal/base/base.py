@@ -2,8 +2,8 @@ from django_components import component
 
 
 @component.register("modal")
-class Modal(component.Component):
-    template_name = "modal/template.html"
+class ModalBase(component.Component):
+    template_name = "modal/base/template.html"
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)

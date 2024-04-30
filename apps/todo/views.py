@@ -2,7 +2,7 @@ from django.urls import reverse
 from django.views.generic import ListView, CreateView
 
 from apps.todo.models import Todo
-from apps.todo.forms import TodoForm
+from apps.todo.forms import TodoForm, TodoItemForm
 
 
 class IndexView(ListView):
