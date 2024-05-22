@@ -1,6 +1,6 @@
 asgiref==3.8.1
 Django==4.2.11
-django_components==0.63
+django_components==0.75
 sqlparse==0.4.4
 typing_extensions==4.10.0
 django-crispy-forms==2.1

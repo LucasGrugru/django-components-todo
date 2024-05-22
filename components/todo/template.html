@@ -5,7 +5,7 @@
           Add item
         </button>
         {% component "modal_form" form=todo_item_form %}
-            {% fill "modal_id" %}todo-{{ todo.pk }}-item-add{% endfill %}
+            {% fill "modal-id" %}todo-{{ todo.pk }}-item-add{% endfill %}
         {% endcomponent %}
     </h5>
     <i>{{ todo.description }}</i>
