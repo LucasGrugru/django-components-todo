@@ -14,6 +14,7 @@ class IndexView(ListView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context["todo_form"] = TodoForm()
+        context["todo_item_form"] = TodoItemForm()
         return context
 
 

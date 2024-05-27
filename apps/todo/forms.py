@@ -37,6 +37,6 @@ class TodoItemForm(forms.ModelForm):
         self.helper = FormHelper(self)
         self.helper.form_action = reverse("todo-create-view")
         self.helper.layout = Layout(
-            Fieldset('Add todo', 'title', 'description'),
+            Fieldset('Add todo', 'title', 'todo'),
             Submit(name='add_todo_submit', value='Add todo'),
         )
